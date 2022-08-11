@@ -1,7 +1,7 @@
 library(terra)
 library(mrcommons)
 
-readGLOBIOM<-function(ssp="1",SPA="1",RCP="2p6",gcm="GFDL",type="Cropland",year=2010){
+readGLOBIOM2<-function(ssp="1",SPA="1",RCP="2p6",gcm="GFDL",type="Cropland",year=2010){
 
   folder<-"/p/projects/landuse/users/mbacca/ISIMIP_IIASA/"
   file<-paste0("SSP",ssp,"_SPA",SPA,"_RCP",RCP,"_",gcm,".nc")
