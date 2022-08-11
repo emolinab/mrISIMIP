@@ -24,10 +24,10 @@ IMAGE<-mbind(setNames(dimSums(IMAGE[,,c("c3per","c4ann","c3ann","c3nfx","c4per")
                   setNames(dimSums(IMAGE[,,c("primn","secdn")]),c("other")),
                   setNames((IMAGE[,,c("urban")]),"urban"))
 
-GLOBIOM_c<-setNames(readGLOBIOM((ssp="1",SPA="1",RCP="2p6",gcm="GFDL",type="Cropland",year=2010)),"crop")
-GLOBIOM_g<-setNames(readGLOBIOM((ssp="1",SPA="1",RCP="2p6",gcm="GFDL",type="Grassland",year=2010)),"past")
-GLOBIOM_f<-setNames(readGLOBIOM((ssp="1",SPA="1",RCP="2p6",gcm="GFDL",type="Forest",year=2010)),"forest")
-GLOBIOM_o<-setNames(readGLOBIOM((ssp="1",SPA="1",RCP="2p6",gcm="GFDL",type="Other",year=2010)),"other")
-GLOBIOM_u<-setNames(readGLOBIOM((ssp="1",SPA="1",RCP="2p6",gcm="GFDL",type="Urban",year=2010)),"urban")
+GLOBIOM_c<-setNames(readGLOBIOM(ssp="1",SPA="1",RCP="2p6",gcm="GFDL",type="Cropland",year=2010),"crop")
+GLOBIOM_g<-setNames(readGLOBIOM(ssp="1",SPA="1",RCP="2p6",gcm="GFDL",type="Grassland",year=2010),"past")
+GLOBIOM_f<-setNames(readGLOBIOM(ssp="1",SPA="1",RCP="2p6",gcm="GFDL",type="Forest",year=2010),"forest")
+GLOBIOM_o<-setNames(readGLOBIOM(ssp="1",SPA="1",RCP="2p6",gcm="GFDL",type="Other",year=2010),"other")
+GLOBIOM_u<-setNames(readGLOBIOM(ssp="1",SPA="1",RCP="2p6",gcm="GFDL",type="Urban",year=2010),"urban")
 
 GLOBIOM<-mbind(GLOBIOM_c,GLOBIOM_g,GLOBIOM_f,GLOBIOM_o,GLOBIOM_u)*dimSums(LUH,dim=3)
