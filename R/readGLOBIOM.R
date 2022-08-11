@@ -18,6 +18,7 @@ readGLOBIOM<-function(ssp="1",SPA="1",RCP="2p6",gcm="GFDL",type="Cropland",year=
     tag_type<-paste0(paste0(tag,cat,"_"),y_tag)
   }else if(type=="Forest"){
     cat<-c(4,5)
+
     tag_type<-paste0(paste0(tag,cat,"_"),y_tag)
     }
 
